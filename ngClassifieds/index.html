@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ngClassifieds</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link href="node_modules/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+
+  <!-- Setting the right viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  </head>
+  <body ng-app="ngClassifieds" ng-cloak>
+      <md-toolbar md-scroll-shrink>
+  <div class="md-toolbar-tools" ng-if="!inLoginPage"> 
+    
+    <p><a href="#/classifieds"><strong>ngClassifieds</strong></a></p>
+    
+    <!--<md-button ng-click="vm.openSidebar()">-->
+      <md-button href="#/classifieds/new">
+      <md-icon class="mdi mdi-plus-circle"></md-icon>
+      New Classified
+    </md-button>
+      
+    <md-button ng-hide="inToDo" ng-click="showFilters = true">
+      <md-icon class="mdi mdi-magnify"></md-icon>
+      Filters
+    </md-button>
+    <md-button href="#/toDoApp" >
+      <md-icon class="mdi mdi-check"></md-icon>
+      To Do App
+    </md-button>
+    <md-button href="#/Calculator" >
+      <md-icon class="mdi mdi-check"></md-icon>
+      Calculator App
+    </md-button>  
+    <md-button class="md-warn" href="#/login" >
+          <md-icon class="mdi mdi-account-off"></md-icon>
+         Logout
+    </md-button>
+  </div>
+          <div class="md-toolbar-tools" ng-if="inLoginPage" layout-align="center center">Please login to proceed</div>       
+</md-toolbar>
+    <ui-view ng-cloak>
+      
+    </ui-view>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="components/classifieds/classifieds.ctr.js"></script>
+    <script src="components/classifieds/classifieds.fac.js"></script>
+    <script src="components/classifieds/new/classifieds.new.ctr.js"></script>
+    <script src="components/classifieds/edit/classifieds.edit.ctr.js"></script>
+    <script src="components/classifieds/card/classified-card.dir.js"></script>
+    <script src="components/classifieds/login.ctr.js"></script>
+    <script src="components/toDo/toDo.ctr.js"></script>  
+    <script src="components/calculator/calc.ctrl.js"></script>  
+    <!-- Firebase -->
+    <!--<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js">
+      </script>
+     AngularFire 
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>-->
+      <script src="lib/firebase.js"></script>
+      <script src="lib/angularfire.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <!--<script>
+        $scope.inToDo = false;
+      </script>-->
+  </body>
+</html>
