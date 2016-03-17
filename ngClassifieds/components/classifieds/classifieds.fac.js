@@ -6,7 +6,7 @@
     .module('ngClassifieds')
     .factory('classifiedsFactory',['$http', '$firebaseArray', function($http, $firebaseArray) {
 
-   var ref = new Firebase('https://ngclassifieds7.firebaseio.com/');
+   var ref = new Firebase('https://classifiedsapp7.firebaseio.com/');
      
     var user = {
          username: "admin",
