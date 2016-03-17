@@ -1,7 +1,7 @@
 (function(){
     "use strict";
     
-    angular.module('ngClassifieds').controller('loginController',['$scope', '$log', '$state','$mdToast',function($scope, $log, $state,$mdToast){
+    angular.module('ngClassifieds').controller('loginController',['$scope', '$log', '$state','$mdToast', 'classifiedsFactory' , function($scope, $log, $state,$mdToast, classifiedsFactory){
         $scope.$parent.inLoginPage = true;
         $scope.user = {};
            
